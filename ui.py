@@ -12,7 +12,7 @@ with block:
 
                 inp_video = gr.Video(
                     label="Input Video",
-                    type="filepath",
+                    #type="filepath",
                     mirror_webcam = False
                 )
                 op_video = gr.Video()
@@ -21,9 +21,9 @@ with block:
 
         gr.HTML('''
         <div class="footer">
-                    <p>Model by <a href="https://github.com/openai/whisper" style="text-decoration: underline;" target="_blank">OpenAI</a> - Gradio App by Ai Diomio
+                    <p>Model by <a href="https://github.com/openai/whisper">OpenAI</a> - Gradio App by Ai Diomio
                     </p>
         </div>
         ''')
 
-block.launch(debug = True, share=True)
+block.launch(debug = True)

@@ -1,11 +1,10 @@
 FROM python:3.10-slim
 
-WORKDIR /python-docker
+WORKDIR /meeting_ai
 
 COPY requirements.txt requirements.txt
 RUN apt-get update && apt-get install git -y
 RUN pip3 install -r requirements.txt
-RUN pip3 install "git+https://github.com/openai/whisper.git" 
 RUN apt-get install -y ffmpeg
 
 COPY . .
