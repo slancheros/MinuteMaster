@@ -8,7 +8,7 @@ with block:
 
     with gr.Group():
         with gr.Box():
-            with gr.Row().style():
+            with gr.Row():
 
                 inp_video = gr.Video(
                     label="Input Video",
@@ -26,4 +26,4 @@ with block:
         </div>
         ''')
 
-block.launch(debug = True)
+block.launch(server_name="0.0.0.0",server_port=7860,debug = True)

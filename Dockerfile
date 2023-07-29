@@ -11,4 +11,5 @@ COPY . .
 
 EXPOSE 7860
 
-CMD [ "python3", "ui.py", "--host=0.0.0.0","--port=7860"]
+ENTRYPOINT [ "python3", "ui.py"]
+##CMD [ "python3", "ui.py"]
