@@ -25,7 +25,7 @@ class MinuteMaster(processor.Processor):
         meeting_summary['transcript'] = video_tools.translated_transcript( self.meeting_summary['audio_file'] )
 
     def generate_subtitled_video(self,meeting_summary):
-        meeting_summary['audio_file'] = video_tools.create_output_video(self.meeting_summary['audio_file'], self.meeting_summary['input_video'],meeting_summary['transcript'])
+        meeting_summary['output_video'] = video_tools.create_output_video(self.meeting_summary['audio_file'], self.meeting_summary['input_video'],meeting_summary['transcript'])
 
     def get_meeting_content(self, meeting_summary):
         meeting_summary['content'] = self.meeting_summary['transcript']['text']
