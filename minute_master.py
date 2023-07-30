@@ -33,11 +33,11 @@ class MinuteMaster(processor.Processor):
     def summarize(self, meeting_summary):
         meeting_summary['summary'] = self.meet_summarizer(self.meeting_summary['content'] )
 
-    def process(self):
+    def process(self, input_video):
+        self.meeting_summary['input_video']=input_video
         self.add([self.get_audio,self.get_transcript,self.generate_subtitled_video,self.get_meeting_content,self.summarize])
-        self.execute(self.meeting_summary)
         print(self.meeting_summary['summary'])
-        return self.meeting_summary
+        return (self.meeting_summary['output_video'],self.meeting_summary['content'],self.meeting_summary['summary'] )
 
     def get_meeting_summary(self):
         return self.meeting_summary

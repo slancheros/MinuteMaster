@@ -18,15 +18,3 @@ def double_data(task):
 def update_header(task):
     task['header'] = 'this is the updated message'
  
-simple_processor = Processor()
- 
-simple_processor.add([double_data,
-              update_header]) # note we are adding the function object, not making a function call
- 
-task = {'header': 'this is the original message',
-           'data': [1,2,3]}
- 
-simple_processor.execute(task)
-
-for key, value in task.items():
-    print(key + ' : ' + str(value))

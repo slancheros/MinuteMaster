@@ -1,8 +1,8 @@
 import gradio as gr
-import video_tools
-import processor
-title = "Add Text/Caption to your YouTube Shorts - MultiLingual"
+import minute_master
 
+title = "MinuteMaster"
+master = minute_master.MinuteMaster()
 block = gr.Blocks()
 
 with block:
@@ -16,11 +16,11 @@ with block:
                     #type="filepath",
                     mirror_webcam = False
                 )
-                op_video = gr.Video(label="Captioned Video")
-                summary = gr.TextArea("Summary")
-                content = gr.TextArea("Content in English")
+                op_video = gr.Video()
+                summary = gr.Text()
+                content = gr.Text()
         btn = gr.Button("Generate Meeting Summary")
-        btn.click(video_tools.create_output_video, inputs=[inp_video], outputs=[op_video,summary,content])
+        btn.click(master.process, inputs=[inp_video], outputs=[op_video,summary,content])
         
         gr.HTML('''
         <div class="footer">
