@@ -29,4 +29,4 @@ with block:
         </div>
         ''')
 
-block.launch(server_name="0.0.0.0",server_port=7860,debug = True)
+block.launch(server_name="0.0.0.0",server_port=7860,debug = True, share=True)
