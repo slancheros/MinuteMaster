@@ -1,7 +1,7 @@
 import gradio as gr
 import video_tools
 import processor
-title = "Add Text/Caption to your YouTube Shorts - MultiLingual"
+title = "Minute Master -- Your usual meetings, but better!"
 
 block = gr.Blocks()
 
@@ -17,11 +17,11 @@ with block:
                     mirror_webcam = False
                 )
                 op_video = gr.Video(label="Captioned Video")
-                summary = gr.TextArea("Summary")
-                content = gr.TextArea("Content in English")
+                summary = gr.TextArea(label="Summary")
+                content = gr.TextArea(label="Content in English")
         btn = gr.Button("Generate Meeting Summary")
         btn.click(video_tools.create_output_video, inputs=[inp_video], outputs=[op_video,summary,content])
-        
+       
         gr.HTML('''
         <div class="footer">
                     <p>Model by <a href="https://github.com/openai/whisper">OpenAI</a> - Gradio App by Ai Diomio
