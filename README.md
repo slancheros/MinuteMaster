@@ -25,7 +25,7 @@ You can find a container in docker.io/slancheros/minute_master. Run it and it wi
 
 ### Run the container by clonning this repository
 
-1. Git clone the repository https://github.com/slancheros/whisperAPI
+1. Git clone the repository https://github.com/slancheros/MinuteMaster
 2. On the root of the project run 
 ```
 docker build . -t minute_master
@@ -44,7 +44,7 @@ Recommendations:
 
 Please find the repository here:
 
-https://github.com/slancheros/whisperAPI
+https://github.com/slancheros/MinuteMaster
 
 
 <mark >We strongly recommend use the containers since for video generation we use ffmpeg </mark>  
