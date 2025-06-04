@@ -9,7 +9,7 @@ RUN apt-get install -y ffmpeg
 
 COPY . .
 
-EXPOSE 7860
+EXPOSE 8080
 
 ENTRYPOINT [ "python3", "ui.py"]
 ##CMD [ "python3", "ui.py"]
